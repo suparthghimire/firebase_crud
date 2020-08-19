@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <h1>Cloud Cafe</h1>
+
+    <div class="content">
+        <form id="add-cafe-form">
+            <input type="text" name="name" placeholder="Cafe name" />
+            <input type="text" name="city" placeholder="Cafe city" />
+            <button>Add Cafe</button>
+        </form>
+
+        <ul id="cafe-list"></ul>
+    </div>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyA5vURMHR0P7eYYu9IBTyALZ0pspxR0nns",
+        authDomain: "coffee-manager-5d2de.firebaseapp.com",
+        databaseURL: "https://coffee-manager-5d2de.firebaseio.com",
+        projectId: "coffee-manager-5d2de",
+        storageBucket: "coffee-manager-5d2de.appspot.com",
+        messagingSenderId: "173513689216",
+        appId: "1:173513689216:web:bbfe71d1975197c66bfe65",
+        measurementId: "G-FJ438GBHS9",
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    db.settings({
+        timestampsInSnapshots: true,
+    });
+</script>
+<script src="index.js"></script>
+
+</html>
